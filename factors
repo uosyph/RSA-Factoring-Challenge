@@ -1,0 +1,36 @@
+#!/usr/bin/python3
+"""Factorize as many numbers as possible
+into a product of two smaller numbers."""
+from sys import argv
+
+
+def factorize(value):
+    """"prints a descomposition of an integer > 1"""
+    i = 2
+
+    if value < 2:
+        return
+    while value % i:
+        i += 1
+    print(f"{value:.0f}={value/i:.0f}*{i:.0f}")
+
+
+def main():
+    if len(argv) != 2:
+        exit("Usage: factors test_file")
+
+    try:
+        with open(argv[1]) as file:
+            line = file.readline()
+
+            while line != "":
+                value = int(line.split('\n')[0])
+                factorize(value)
+                line = file.readline()
+    except Exception as e:
+        print(e)
+        pass
+
+
+if __name__ == "__main__":
+    main()
