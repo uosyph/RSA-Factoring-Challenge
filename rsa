@@ -1,18 +1,35 @@
 #!/usr/bin/python3
+"""
+Factorize as many numbers as possible into a product of two smaller numbers.
+
+Functions:
+    factorize()
+
+Usage: ./rsa <file>
+    where <file> is a file containing one natural number to factor.
+Output format: original_number=new_number*divisor
+    new_number and divisor are always prime numbers.
+"""
+
 import sys
 import ctypes
 
 
-def print_factors():
-    func = ctypes.CDLL("./lib_factors_functions.so")
-    func.trial_division.argtypes = [ctypes.c_long]
+def factorize():
+    """
+    Factorizes as many numbers as possible into
+    a product of two smaller prime numbers and print them.
+    """
+
+    c_factors = ctypes.CDLL("./lib_factors.so")
+    c_factors.find_divisor.argtypes = [ctypes.c_long]
     with open(sys.argv[1]) as f:
         line = f.readline()
         while line != '':
             num = int(line)
-            func.trial_division(num)
+            c_factors.find_divisor(num)
             line = f.readline()
 
 
 if __name__ == "__main__":
-    print_factors()
+    factorize()

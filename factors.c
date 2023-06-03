@@ -5,7 +5,7 @@
  * @num: A number to find the smallest divisor for.
  * Return: smallest divisor if found, or 0 if the number is prime.
  */
-int trial_division(long int num)
+int find_divisor(long int num)
 {
 	long int factor;
 
