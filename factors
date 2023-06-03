@@ -1,5 +1,31 @@
 #!/usr/bin/python3
-from factors_functions import *
-if __name__ == '__main__':
+import sys
 
-    print(unix_time(print_factors))
+
+def find_divisor(num: int) -> int:
+    while num % 2 == 0:
+        return 2
+
+    factor = 3
+    while factor * factor <= num:
+        if num % factor == 0:
+            return factor
+        else:
+            factor += 2
+
+    return 1
+
+
+def print_factors():
+    with open(sys.argv[1], 'r') as f:
+        line = f.readline()
+        while line != '':
+            num = int(line)
+            div = find_divisor(num)
+            print(f"{num}={num//div}*{div}")
+
+            line = f.readline()
+
+
+if __name__ == "__main__":
+    print_factors()
