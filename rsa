@@ -1,8 +1,25 @@
 #!/usr/bin/python3
+"""
+Factorize as many numbers as possible into a product of two smaller numbers.
+
+Functions:
+    factorize()
+
+Usage: ./rsa <file>
+    where <file> is a file containing one natural number to factor.
+Output format: original_number=new_number*divisor
+    new_number and divisor are always prime numbers.
+"""
+
 import sys
 
 
 def factorize():
+    """
+    Factorizes as many numbers as possible into
+    a product of two smaller prime numbers and print them.
+    """
+
     with open(sys.argv[1]) as f:
         for line in f:
             number = int(line)

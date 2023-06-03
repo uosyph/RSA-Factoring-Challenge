@@ -11,7 +11,9 @@ Usage: ./factors <file>
     One number per line.
 Output format: original_number=new_number*divisor
     one factorization per line.
+    new_number and divisor are not always prime numbers.
 """
+
 import sys
 
 
@@ -41,10 +43,10 @@ def find_divisor(num: int) -> int:
 def factorize():
     """
     Factorizes as many numbers as possible into
-    a product of two smaller numbers and prints them.
+    a product of two smaller numbers and print them.
     """
 
-    with open(sys.argv[1], 'r') as f:
+    with open(sys.argv[1]) as f:
         line = f.readline()
         while line != '':
             num = int(line)
