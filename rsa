@@ -1,0 +1,25 @@
+#!/usr/bin/python3
+import sys
+
+
+def factorize():
+    with open(sys.argv[1]) as f:
+        for line in f:
+            number = int(line)
+            if number % 2 == 0:
+                print(f"{number}={number // 2}*2")
+                continue
+
+            factor = 3
+            while factor < number // 2:
+                if number % factor == 0:
+                    print(f"{number}={number // factor}*{factor}")
+                    break
+                factor = factor + 2
+
+            if factor == (number // 2) + 1:
+                print(f"{number}={number}*1")
+
+
+if __name__ == "__main__":
+    factorize()
