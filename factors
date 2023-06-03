@@ -5,6 +5,12 @@ Factorize as many numbers as possible into a product of two smaller numbers.
 Functions:
     find_divisor(num) -> int
     factorize()
+
+Usage: ./factors <file>
+    where <file> is a file containing natural numbers to factor.
+    One number per line.
+Output format: original_number=new_number*divisor
+    one factorization per line.
 """
 import sys
 
@@ -13,7 +19,7 @@ def find_divisor(num: int) -> int:
     """
     Finds the smallest divisor of a given number.
     Args:
-        num: A number to find the smallest divisor for.
+        num (int): A number to find the smallest divisor for.
     Returns:
         smallest divisor if found
         0 if the number is prime
