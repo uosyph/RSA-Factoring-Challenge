@@ -1,8 +1,8 @@
 #include <stdio.h>
 
 /*
- * Finds the smallest divisor of a given number.
- * @num: A number to find the smallest divisor for.
+ * find_divisor - finds the smallest divisor of a given number.
+ * @num: a number to find the smallest divisor for.
  * Return: smallest divisor if found, or 0 if the number is prime.
  */
 int find_divisor(long int num)
