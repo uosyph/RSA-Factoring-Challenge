@@ -7,11 +7,11 @@ Functions:
     factorize()
 
 Usage: ./factors <file>
-    where <file> is a file containing natural numbers to factor.
+    Where <file> is a file containing natural numbers to factor.
     One number per line.
-Output format: original_number=new_number*divisor
-    one factorization per line.
-    new_number and divisor are not always prime numbers.
+Output format: n=p*q
+    One factorization per line.
+    p and q are not always prime numbers.
 """
 
 import sys

@@ -6,9 +6,9 @@ Functions:
     factorize()
 
 Usage: ./rsa <file>
-    where <file> is a file containing one natural number to factor.
-Output format: original_number=new_number*divisor
-    new_number and divisor are always prime numbers.
+    Where <file> is a file containing one natural number to factor.
+Output format: n=p*q
+    p and q are always prime numbers.
 """
 
 import sys
