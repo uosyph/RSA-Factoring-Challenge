@@ -51,7 +51,7 @@ def factorize():
         while line != '':
             num = int(line)
             div = find_divisor(num)
-            print("{}={}*{}".format(num, num//div,div))
+            print(f"{num}={num//div}*{div}")
 
             line = f.readline()
 
