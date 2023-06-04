@@ -120,7 +120,7 @@ $
 |---|---|
 |[factors](factors)|Factorize as many numbers as possible into a product of two smaller numbers.|
 |[factors.c](factors.c)|Finds the smallest divisor of a given number.|
-|[lib_factors.so](lib_factors.so)|A shared object library file of the [factors.c](factors.c) file|
+|[lib_factors.so](lib_factors.so)|A shared object library file of the [factors.c](factors.c) file that can be used in the [rsa](rsa) file.|
 |[rsa](rsa)|Factorize as many numbers as possible into a product of two smaller prime numbers.|
 
 <p align="right"><a href="#readme-top">Back to Top</a></p>
